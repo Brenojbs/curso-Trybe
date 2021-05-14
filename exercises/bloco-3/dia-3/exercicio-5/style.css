@@ -1,0 +1,64 @@
+    .Lista-ordenada{
+        background-color: yellow;
+    }
+
+    .li0, .li2, .li4{
+        color: green;
+        
+    }
+
+    .li3{
+        text-transform: uppercase;
+    
+    }
+
+    h1, h3{
+        color: red;
+    }
+
+    h1 em, h3 em{
+        font-size: 40px;
+        border: 1px solid black;
+    }
+
+    li{
+        font-size: 20px;
+    }
+    
+    li em{
+        font-weight: bold;
+    }
+    
+    .lista-desordenada .Java{
+        background-color: rgb(233, 107, 128);
+    }
+    .lista-desordenada .li12{
+        color:blue;
+    }
+
+    
+    .cor-laranja:hover{
+        color: orange;
+        font-weight: bold;
+    }
+    
+    
+    .cor-verde:hover{
+        color: green;
+        font-weight: bold;
+    }
+
+    .cor-preta:hover{
+        color: black;
+        font-weight: bold;
+    }
+
+    .cor-amarelo:hover{
+        color: yellow;
+        font-weight: bold;
+    }
+
+    .cor-verde:hover{
+        font-weight: bold;
+        color: green;
+    }
