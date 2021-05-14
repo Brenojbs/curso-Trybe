@@ -1,0 +1,16 @@
+    p, h1{
+        text-align: center;
+    }
+
+    ol, ul{
+        list-style: none;
+    }
+
+    .lista-ordenada:hover{
+        background-color: rgb(146, 235, 238);
+
+    }
+
+    .lista-ordenada:active{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
