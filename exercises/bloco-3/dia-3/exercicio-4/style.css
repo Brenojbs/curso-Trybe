@@ -1,0 +1,10 @@
+    div:hover{
+        border-width: 1px;
+        border-color: brown;
+        border-style: solid;
+    }
+
+    div{
+
+        color: chartreuse;
+    }
