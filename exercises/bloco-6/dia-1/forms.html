@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testando form</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
   <header>
@@ -38,12 +38,11 @@
           <option value="rs">Rio Grande do Sul</option>
         </select>
       </label>
-
+      <p>Tipo</p>
       <label for="i-casa">
-        <input type="radio" name="r-endereço" id="i-casa">Casa</label>
-        <label for="i-apartamento"><input type="radio" name="r-endereço" id="i-apartamento">Apartamento</label>
-      <button type="submit">Enviar</button>
-    </fieldset>
+        <input type="radio" name="r-endereço" id="i-casa" required>Casa</label>
+        <label for="i-apartamento"><input type="radio" name="r-endereço" id="i-apartamento">Apartamento</label><br>
+      </fieldset>
 
     <fieldset>
       <legend>Resumo do Currículo</legend>
@@ -60,10 +59,12 @@
       </label>
       
       <label for="i-date">
-        <input type="date" name="i-date" id="i-date" max="31" min="0">
+        <input type="date" name="i-date" id="i-date" max="2030-12-31" min="2000-0-0" required>
       </label>
 
     </fieldset>
+    <button type="submit" id="prevent">Enviar</button>
+    <button type="reset">Limpar Dados</button>
   </form>
   <script src="script.js"></script>
 </body>
