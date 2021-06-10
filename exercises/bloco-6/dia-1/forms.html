@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando form</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Treinando formulários</h1>
+    </div>
+  </header>
+  <form action="" method="get">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      <label for="i-name">Name:
+        <input type="text" name="i-name" id="i-name" maxlength="40" required autofocus>
+      </label>
+
+      <label for="i-email"><input type="email" name="email" id="i-email"  autocomplete="off" placeholder="Digite seu e-mail" maxlength="50" required></label>
+      
+      <label for="i-cpf"><input type="text" name="cpf" id="i-cpf" required maxlength="11" placeholder="Digite seu CPF"></label>
+
+      <label for="i-endereço"><input type="text" name="endereço" id="i-endereço" required maxlength="200" placeholder="Digite seu endereço"></label>
+
+      <label for="i-cidade">
+        <input type="text" name="i-cidade" id="i-cidade" maxlength="28" required placeholder="Digite sua cidade">
+      </label>
+
+      <label for="s-estado">
+        <select name="estado" id="s-estado" required>
+          <option value="rj">Rio de Janeiro</option>
+          <option value="sp" selected>São Paulo</option>
+          <option value="mg">Minas Gerais</option>
+          <option value="rs">Rio Grande do Sul</option>
+        </select>
+      </label>
+      <p>Tipo</p>
+      <label for="i-casa">
+        <input type="radio" name="r-endereço" id="i-casa" required>Casa</label>
+        <label for="i-apartamento"><input type="radio" name="r-endereço" id="i-apartamento">Apartamento</label><br>
+      </fieldset>
+
+    <fieldset>
+      <legend>Resumo do Currículo</legend>
+      <label for="t-area-curriculo">
+        <textarea name="resumo" id="t-area-curriculo" cols="30" rows="10" maxlength="1000" required ></textarea>
+      </label>
+      <br>
+      <label for="i-cargo">Cargo
+        <input type="text" name="i-cargo" id="i-cargo" maxlength="40" required>
+      </label>
+
+      <label for="i-descrição">Descrição
+        <input type="text" name="i-descrição" id="i-descrição" maxlength="500" required>
+      </label>
+      
+      <label for="i-date">
+        <input type="date" name="i-date" id="i-date" max="2030-12-31" min="2000-0-0" required>
+      </label>
+
+    </fieldset>
+    <button type="submit" id="prevent">Enviar</button>
+    <button type="reset">Limpar Dados</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
