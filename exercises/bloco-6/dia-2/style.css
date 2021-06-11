@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(186, 245, 217);
+}
+
+input {
+    margin: 10px 2px;
+}
+
+label {
+    margin-right: 30px;
+}
+
+.btn {
+    margin: 25px 10px;
+}
+
+form,h1{
+    margin-left: 20%;
+    margin-bottom: 60px;
+    margin-top: 10px;
+}
+
+fieldset {
+    margin-right: 50px;
+    display: inline-block;
+}
+
+.top {
+    margin-top: 40px;
+}

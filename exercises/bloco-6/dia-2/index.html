@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando form</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Treinando formulários</h1>
+    </div>
+  </header>
+  <form action="" method="get">
+    <fieldset>
+      <legend >Dados Pessoais</legend>
+      <div class="container">
+          <label for="i-name">Name:
+            <input class="form-control" type="text" name="i-name" id="i-name" maxlength="40" required autofocus>
+          </label>
+      </div>
+
+      <div class="container"><label for="i-email">E-mail
+      <input type="email" name="email" id="i-email"  autocomplete="off" placeholder="Digite seu e-mail" maxlength="50" required class="form-control"></label></div>
+      
+      <div class="container"><label for="i-cpf">C.P.F.
+      <input type="text" name="cpf" id="i-cpf" required maxlength="11" placeholder="Digite seu CPF" class="form-control"></label></div>
+
+      <div class="container"><label for="i-endereço">Endereço
+      <input type="text" name="endereço" id="i-endereço" required maxlength="200" placeholder="Digite seu endereço" class="form-control"></label></div>
+
+      <div class="container">
+          <label for="i-cidade">Cidade
+          <input type="text" name="i-cidade" id="i-cidade" maxlength="28" required placeholder="Digite sua cidade" class="form-control">
+          </label>
+      </div>
+
+      <div class="input-group container">
+          <label for="s-estado">Estado
+            <select name="estado" id="s-estado" required class="form-select">
+              <option value="rj">Rio de Janeiro</option>
+              <option value="sp" selected>São Paulo</option>
+              <option value="mg">Minas Gerais</option>
+              <option value="rs">Rio Grande do Sul</option>
+            </select>
+          </label>
+      </div>
+
+      <div class="form-check container">
+          <p class="form-label">Tipo</p>
+          <label for="i-casa">
+            <input type="radio" name="r-endereço" id="i-casa" required class="form-check-input">Casa</label>
+            <label for="i-apartamento"><input type="radio" name="r-endereço" id="i-apartamento" class="form-check-input">Apartamento</label><br>
+      </div>
+      </fieldset>
+
+    <fieldset>
+      <legend>Resumo do Currículo</legend>
+      <div class="container mb-3">
+          <label for="t-area-curriculo">
+            <textarea name="resumo" id="t-area-curriculo" cols="30" rows="10" maxlength="1000" required class="form-control top"></textarea>
+          </label>
+      </div>
+
+      
+      <div class="container">
+          <label for="i-cargo">Cargo
+            <input type="text" name="i-cargo" id="i-cargo" maxlength="40" required class="form-control">
+          </label>
+      </div>
+
+      <div class="container">
+          <label for="i-descrição">Descrição
+            <input type="text" name="i-descrição" id="i-descrição" maxlength="500" required class="form-control">
+          </label>
+      </div>
+      
+      <div class="container">
+          <label for="i-date">
+            <input type="date" name="i-date" id="i-date" max="2030-12-31" min="2000-0-0" required class="form-control">
+          </label>
+      </div>
+
+    </fieldset>
+    <div class="container">
+        <button type="submit" id="prevent" class="btn btn-primary">Enviar</button>
+        <button type="reset" class="btn btn-warning">Limpar Dados</button>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
