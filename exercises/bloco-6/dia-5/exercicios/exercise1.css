@@ -1,0 +1,36 @@
+* {
+  margin: 5px;
+}
+
+body {
+  font-size: 19px;
+}
+h1 {
+  font-size: 35px;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+    margin: 40px 0px;
+}
+
+@media screen and (min-width: 610px) {
+  body {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+  div {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
