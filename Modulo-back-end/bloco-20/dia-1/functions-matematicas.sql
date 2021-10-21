@@ -49,3 +49,13 @@ SELECT RAND();
 SELECT ROUND(7 + (RAND() * 6));
 
 -- O cálculo que é feito é o seguinte: (7 + (0.0 a 1.0 * 6))
+
+--
+-- Funtions agregaçao
+  
+-- Usando a coluna replacement_cost (valor de substituição) vamos encontrar:
+SELECT AVG(replacement_cost) FROM sakila.film; -- 19.984000 (Média entre todos registros)
+SELECT MIN(replacement_cost) FROM sakila.film; -- 9.99 (Menor valor encontrado)
+SELECT MAX(replacement_cost) FROM sakila.film; -- 29.99 (Maior valor encontrado)
+SELECT SUM(replacement_cost) FROM sakila.film; -- 19984.00 (Soma de todos registros)
+SELECT COUNT(replacement_cost) FROM sakila.film; -- 1000 registros encontrados (Quantidade)
