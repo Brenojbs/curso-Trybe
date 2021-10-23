@@ -1,3 +1,45 @@
+-- Exemplo de trigger para o INSERT :
+
+USE rede_social;
+
+DELIMITER $$
+CREATE TRIGGER trigger_perfil_insert
+    BEFORE INSERT ON perfil
+    FOR EACH ROW
+BEGIN
+    SET NEW.ultima_atualizacao = NOW(),
+        NEW.acao = 'INSERT';
+END $$
+DELIMITER ;
+
+-- Exemplo de trigger para o UPDATE :
+
+USE rede_social;
+
+DELIMITER $$
+CREATE TRIGGER trigger_perfil_update
+    BEFORE UPDATE ON perfil
+    FOR EACH ROW
+BEGIN
+    SET NEW.ultima_atualizacao = NOW(),
+        NEW.acao = 'UPDATE';
+END $$
+DELIMITER ;
+
+-- Exemplo de trigger para o DELETE :
+
+USE rede_social;
+
+DELIMITER $$
+CREATE TRIGGER trigger_perfil_delete
+    AFTER DELETE ON perfil
+    FOR EACH ROW
+BEGIN
+    INSERT INTO log_perfil(acao, data_acao)
+    VALUES ('exclusão', NOW());
+END $$
+DELIMITER ;
+
 -- Estrutura Padrão Procedure
 
 USE banco_de_dados; -- obrigatório para criar a procedure no banco correto
