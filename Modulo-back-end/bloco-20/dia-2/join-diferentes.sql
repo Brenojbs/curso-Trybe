@@ -56,6 +56,7 @@
 
 -- OPERADOR EXISTS
 -- amigos que possuem pets
+
 -- USE db;
 -- SELECT * FROM friends AS f WHERE EXISTS (
 -- 	SELECT owner_id FROM pets as p
@@ -64,6 +65,7 @@
 
 -- -- NOT EXISTS
 -- -- amigos que nao possuem pets
+
 -- SELECT * FROM friends AS f WHERE NOT EXISTS (
 -- 	SELECT owner_id FROM pets as p
 --     WHERE p.owner_id = f.friend_id
