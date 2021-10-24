@@ -1,4 +1,4 @@
--- Exer 0
+-- Exer 0.1
 
 -- USE sakila;
 DELIMITER $$
@@ -14,6 +14,38 @@ DELIMITER ;
 
 CALL ShowTop10Actor();
 
+-- Exer 0.2
+
+-- USE sakila;
+DELIMITER $$
+CREATE PROCEDURE Show_table_categori(IN name_categori VARCHAR(100))
+BEGIN
+	SELECT f.film_id, f.title, fc.category_id, c.name
+    FROM film as f
+    INNER JOIN film_category as fc ON f.film_id = fc.film_id
+    INNER JOIN category as c ON c.category_id = fc.category_id
+    WHERE c.name = name_categori;
+END $$
+DELIMITER ;
+
+CALL Show_table_categori('action');
+
+
+-- Exer 0.3
+
+-- USE sakila;
+DELIMITER $$
+CREATE PROCEDURE confirma_clientis(IN `client` VARCHAR(200), OUT confirm VARCHAR(100))
+BEGIN
+	SET confirm = IF((SELECT active
+        FROM sakila.customer
+        WHERE email = `client`), 'true', 'false');
+END $$
+DELIMITER ;
+
+SELECT @email.client;
+CALL confirma_clientis('MARY.SMITH@sakilacustomer.org', @email.client);
+SELECT @email.client;
 
 -- //////////////////////////////////////////////////////////////////////////////////////////////
 
