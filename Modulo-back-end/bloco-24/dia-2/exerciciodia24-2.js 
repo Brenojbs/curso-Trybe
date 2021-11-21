@@ -126,6 +126,7 @@ db.movies.updateOne(
   { arrayFilters: [ { "elemento.actor": "Daniel Stern" } ] },
 );
 
+// Essa query apaga o valor anterior deixando os valores passados agora.
 db.movies.updateOne(
   { title: "Batman" },
   { $set: {
@@ -143,6 +144,24 @@ db.movies.updateOne(
     },
   },
 );
+
+db.movies.updateMany(
+  { title: "Batman" },
+  {
+    $set : {
+      "cast.$[elemento].actor": ["Christian Bale"],
+      "cast.$[elemento2].actor": ["Michael Caine"],
+      "cast.$[elemento3].actor": ["Heath Ledger"],
+    },
+  },
+  { arrayFilters: [
+      { "elemento.character": "Batman" },
+      { "elemento2.character": "Alfred" },
+      { "elemento3.character": "Coringa" },
+    ],
+  },
+);
+
 
 
 db.movies.find();
