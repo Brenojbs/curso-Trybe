@@ -65,6 +65,102 @@ db.movies.updateMany(
   { $push: { category: "90's" } }
 );
 
+db.movies.updateOne(
+  { title: "Home Alone" },
+  { $set: {
+      cast: [
+          {
+            "actor": "Macaulay Culkin",
+            "character": "Kevin"
+          },
+          {
+            "actor": "Joe Pesci",
+            "character": "Harry"
+          },
+          {
+            "actor": "Daniel Stern"
+          },
+      ],
+    },
+  },
+);
+
+db.movies.updateOne(
+  { title: "Batman" },
+  { $set: {
+      cast: [
+          {
+            "actor": "Macaulay Culkin",
+            "character": "Kevin"
+          },
+          {
+            "actor": "Joe Pesci",
+            "character": "Harry"
+          },
+          {
+            "actor": "Daniel Stern"
+          },
+      ],
+    },
+  },
+);
+
+
+db.movies.updateOne(
+  { title: "Home Alone" },
+  {
+    $set : {
+      "cast.0.$[elemento].character": "Marv",
+    },
+  },
+  { arrayFilters: [ { "elemento.actor": "Daniel Stern" } ] },
+);
+
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $set : {
+      "cast.$[elemento].character": "Marv",
+    },
+  },
+  { arrayFilters: [ { "elemento.actor": "Daniel Stern" } ] },
+);
+
+// Essa query apaga o valor anterior deixando os valores passados agora.
+db.movies.updateOne(
+  { title: "Batman" },
+  { $set: {
+      cast: [
+          {
+            "character": "Batman"
+          },
+          {
+            "character": "Alfred"
+          },
+          {
+            "character": "Coringa"
+          }
+      ],
+    },
+  },
+);
+
+db.movies.updateMany(
+  { title: "Batman" },
+  {
+    $set : {
+      "cast.$[elemento].actor": ["Christian Bale"],
+      "cast.$[elemento2].actor": ["Michael Caine"],
+      "cast.$[elemento3].actor": ["Heath Ledger"],
+    },
+  },
+  { arrayFilters: [
+      { "elemento.character": "Batman" },
+      { "elemento2.character": "Alfred" },
+      { "elemento3.character": "Coringa" },
+    ],
+  },
+);
 
 
 
