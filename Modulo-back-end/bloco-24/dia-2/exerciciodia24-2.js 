@@ -104,4 +104,26 @@ db.movies.updateOne(
     },
   },
 );
+
+
+db.movies.updateOne(
+  { title: "Home Alone" },
+  {
+    $set : {
+      "cast.0.$[elemento].character": "Marv",
+    },
+  },
+  { arrayFilters: [ { "elemento.actor": "Daniel Stern" } ] },
+);
+
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $set : {
+      "cast.$[elemento].character": "Marv",
+    },
+  },
+  { arrayFilters: [ { "elemento.actor": "Daniel Stern" } ] },
+);
+
 db.movies.find();
