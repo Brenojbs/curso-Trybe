@@ -1,0 +1,10 @@
+export { default as Login } from './Login';
+export { default as Home } from './Home';
+export { default as Register } from './Register';
+export { default as OrderDetails } from './OrderDetails';
+export { default as Orders } from './Orders';
+export { default as AdminPage } from './Admin';
+export { default as Products } from './Products';
+export { default as Checkout } from './Checkout';
+export { default as Sellers } from './Sellers';
+export { default as OrderDetailsSeller } from './OrderDetailsSeller';
